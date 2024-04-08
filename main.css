@@ -7,7 +7,9 @@ body{
 
 body{
     display: flex;
-    background-color: black;
+    flex-direction: column;
+    --form-height: 6rem;
+    --form-content-size: 1rem;
 }
 
 body,
@@ -24,4 +26,33 @@ canvas{
 
 img{
     display:none;
+}
+
+form{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: var(--form-content-size);
+    height: var(--form-content-size);
+
+}
+
+form * {
+    font-size: var(--form-content-size);
+}
+
+input[type="checkbox"] {
+    width: var(--form-content-size);
+    height: var(--form-content-size);
+}
+
+main {
+    display: flex;
+    height: calc(100% - var(--form-height));
+}
+
+label {
+    color: white;
 }
